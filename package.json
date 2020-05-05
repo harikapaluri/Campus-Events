@@ -1,0 +1,25 @@
+{
+  "name": "yes",
+  "version": "1.0.1",
+  "description": "MileStone 3",
+  "main": "app.js",
+  "scripts": {
+    "test": "hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "no"
+  },
+  "keywords": [
+    "MileStone",
+    "3"
+  ],
+  "author": "Harika",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.4.0",
+    "moment": "^2.24.0"
+  }
+}

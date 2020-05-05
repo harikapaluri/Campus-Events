@@ -1,0 +1,106 @@
+use NBAD
+db.createCollection('connections')
+db.createCollection('userprofiles')
+db.createCollection('users')
+
+db.connections.insert({
+	"topic": "Music And Dance",
+          "host": "James",
+          "name": "Learn Guitar with James MWF at 8pm",
+          "connectionId": "A1",
+          "details": "Hi I am James Ive been practicing Guitar for years and would love to meet people who I could connect and play music with.",
+          "date": "12/02/2020",
+          "time": "2:45am-3:00pm",
+          "where": "Music Hall",
+          "icon":"/assets/images/man.png",
+          "rsvp":"No"
+})
+db.connections.insert({
+	"topic": "Music And Dance",
+          "host": "Gloria",
+          "name": "Tuesday Tango by Gloria",
+          "connectionId": "A2",
+          "details": "Hi I am Gloria Ive been practicing Tango for years and would love to meet people who I could connect and dance with.",
+          "date": "13/02/2020",
+          "time": "3:00pm to 5pm",
+          "where": "UREC 3rd Floor",
+          "icon":"/assets/images/gloria.jfif",
+          "rsvp":"No"
+})
+db.connections.insert({
+	"topic": "Music And Dance",
+          "host": "Serena",
+          "name": "Salsa serena on Saturdays",
+          "connectionId": "A3",
+          "details": "Hi I am Serena Ive been practicing Salsa for years and would love to meet people who I could connect and dance with.",
+          "date": "2/02/2020",
+          "time": "3:00pm-5:00pm",
+          "where": "Belk gym",
+          "icon":"/assets/images/pretty.jfif",
+          "rsvp":"No"
+})
+db.connections.insert({
+	 "topic": "Food",
+        "host": "UNCC Dining Services",
+          "name": "Taco Thursdays hosted by Norm Lounge",
+          "connectionId": "A4",
+          "details": "Hi we are UNCC Dining Team we would love to meet people who I could connect and dance with.",
+          "date": "15/05/2020",
+          "time": "2:45am-3:00pm",
+          "where": "Norm Lounge",
+           "icon":"/assets/images/cab.jpeg",
+           "rsvp":"No"
+})
+db.connections.insert({
+ "topic": "Food",
+          "host": "STudent Union",
+          "name": "Student Union",
+          "connectionId": "A5",
+          "details": "Hi we are Sovi Team we would love to meet people who I could connect and dance with.",
+          "date": "13/02/2020",
+          "time": "2:45pm-3:00pm",
+          "where": "SOVI",
+          "icon":"/assets/images/sovi.png",
+          "rsvp":"No"
+})
+db.connections.insert({
+	"topic": "Food",
+          "host": "CAB",
+          "name": "Cereal brunch hosted by CAB",
+          "connectionId": "A6",
+          "details": "Hi I am Gloria Ive been practicing Tango for years and would love to meet people who I could connect and dance with.",
+          "date": "13/02/1995",
+          "time": "2:45am-3:00pm",
+          "where": "UREC 3rd Floor",
+          "icon":"/assets/images/cab.jpeg",
+          "rsvp":"No"
+})
+
+db.users.insert({
+	"userID" :"harikapaluri@gmail.com",
+    "firstName" :"Harika",
+    "lastName" : "Paluri",
+    "emailId" : "harikapaluri@gmail.com",
+     "add1" : "9519 University Terrace Drive",
+      "add2" : "Apt M",
+       "city" : "Charlotte",
+        "state" : "North Carolina",
+        "zipcode" :"28262",
+         "country" :"USA",
+         "password":"NBAD2020"
+})
+db.users.insert({
+  "userID" :"Norm@gmail.com",
+    "firstName" :"Norm",
+    "lastName" : "Paluri",
+    "emailId" : "harikapaluri@gmail.com",
+     "add1" : "9519 University Terrace Drive",
+      "add2" : "Apt M",
+       "city" : "Charlotte",
+        "state" : "North Carolina",
+        "zipcode" :"28262",
+         "country" :"USA",
+          "password":"NBAD2020"
+})
+
+db.dropDatabase();
