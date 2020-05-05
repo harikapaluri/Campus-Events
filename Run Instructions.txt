@@ -1,3 +1,2 @@
 1.The user ID to login that I have given is harikapaluri@gmail.com and password is NBAD2020.
 2.The user ID to login that I have given is Norm@gmail.com and password is NBAD2020.
-3.I have added db.dropDatabase() at the end of the MileStone5_CreateDb.txt to reset.
