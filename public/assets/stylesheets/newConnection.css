@@ -1,0 +1,110 @@
+header,footer,main,nav{
+  display: block;
+}
+
+main{
+  
+  font-family:"Georgia";
+}
+  .mainheader{
+    background-color:green;
+    color: white;
+    margin-left: auto;
+    margin-right: auto; 
+    padding:10px 20px;
+    font-family:"Georgia";
+  }
+  .mainheader a{
+     text-align: center;
+    color: white;
+    font-family:"Georgia";
+  }
+.mainheader li{
+  display: inline;
+  float:right;
+  margin-top: 10px;
+  padding-left: 50px;
+  font-family:"Georgia";
+}
+
+.innerNavigation{
+  background-color: green;
+  padding-top: 1px;
+  border-top: 5px solid yellow;
+  border-bottom:5px solid yellow; 
+  color: white;
+  font-family:"Georgia";
+}
+.innerNavigation a{
+  color: white;
+  font-family:"Georgia";
+}
+nav a{
+  color:black;
+  text-decoration: none;
+  font-family:"Georgia";
+}
+
+.Logo {
+
+  padding: 5px;
+  width: 50px;
+  font-family:"Georgia";
+}
+main{
+  width:440px;
+  height: 500px;
+  padding-left:20px;
+}
+body{
+width:960px;
+margin-left: auto;
+margin-right: auto;
+font-family:"Georgia";
+}
+
+footer{
+    font-family:"Georgia";
+    background-color:green;
+    color: white;
+    padding:10px 20px;
+    
+  }
+  footer a{
+    padding-left: 50px;
+    color: white;
+    clear: both;
+    font-family:"Georgia";
+  }
+
+ .eventForm  {
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 65%;
+  margin-top: 6px;
+  margin-bottom: 16px;
+ 
+  align-content: center;
+}
+.eventForm input[type=text], textarea{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-content: center;
+  resize:vertical;
+}
+.create {
+padding-left: 150px;
+}
+.block label {
+  display: inline-grid;
+  width: 150px;
+}​
+input{
+  padding-left: 10px;
+}  
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }

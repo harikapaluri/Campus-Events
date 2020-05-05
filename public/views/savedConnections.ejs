@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="/assets/stylesheets/saveConnection.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Saved Connections</title>
+
+	
+</head>
+<body>
+	<% if(userProfile!=null) { %>
+     <%- include ('partial/LoggedInHeader.ejs') %>
+   <% } %>
+       <% if(userProfile==null) { %>
+      <%- include ('partial/header.ejs') %>
+       <% } %>
+	<main>	
+<p><h4> <% if(userProfile!=null) { %> <%=userProfile.userName %>'s Connections  <% } %></h4>
+	<table>
+  
+  
+   <% if(userProfile.connections.length==0) { %>
+    <tr>
+      <td >No connections are saved.Please Click on Events to rsvp some interesting events. </td> 
+    </tr>
+    <% } %>
+    <% if(userProfile!=null&& userProfile.connections.length>0) { %>
+    <tr>
+    <th>Connection</th>
+    <th>Category</th>
+    <th>Going</th>
+    <th> </th>
+     </tr>
+    <% for(let item of userProfile.connections) { %>
+   <tr>
+    <td><img src="<%=item.icon %>" alt="logo" class="tableImage"><%=item.name %></td>
+    <td><%=item.topic %></td>
+    <td><%=item.rsvp %></td>
+  <td><div class="btn-group"><button  type="button" onclick="window.location.href='/connection/<%=item.connectionId %>'">Update</button ><button  type="button" onclick="window.location.href= '/user/Delete/<%=item.connectionId %>'">Delete</button>
+    </div></td>
+  </tr>
+
+  <% } %>
+  <% } %>
+</table>
+</main>
+<%- include ('partial/footer.ejs') %>
+</body>
+</html>

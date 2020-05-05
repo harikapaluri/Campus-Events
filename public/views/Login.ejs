@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="/assets/stylesheets/connections.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Contact</title>
+		
+</head>
+<body>
+<% if(userProfile!=null) { %>
+     <%- include ('partial/LoggedInHeader.ejs') %>
+   <% } %>
+       <% if(userProfile==null) { %>
+      <%- include ('partial/header.ejs') %>
+       <% } %>
+
+        <% if(errors!=null){ %>
+       <p>
+       <% errors.forEach(function(item){ %>
+       <b> <%=item.msg%> </b><br>
+       
+      <% });  %>
+      <% } %>
+       </p>
+	<main>
+	
+	
+	<form  action="/user" method="POST" class="loginForm">
+	Please Enter User Name and Password to Login!
+	<div class="block">
+  <label for="usrName">UserName:</label>
+  <input type="text" id="usrName" name="usrName"><br>
+ </div>
+ <div class="block">
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password"><br>
+</div>
+<div class="block">
+  <button type="submit">Login</button>
+</div>	
+	</form>
+</main>
+
+<%- include ('partial/footer.ejs') %>
+</body>
+</html>

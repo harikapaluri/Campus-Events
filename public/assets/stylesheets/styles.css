@@ -1,0 +1,11 @@
+.main{
+    position: absolute;
+    top: 10%;
+    left: 10%;}
+
+table{background:#F1948A; color:#78281F;font-size:22pt}
+table, th, td {
+    border: 1px solid black;
+  
+  }
+table tr td{text-align: center; background: #F1948A; color: #78281F; font-size: 20pt; padding:10px}

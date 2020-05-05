@@ -1,0 +1,125 @@
+header,footer,main,nav{
+  display: block;
+}
+.loginForm{
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 65%;
+  margin-top: 6px;
+  margin-bottom: 16px;
+ 
+  align-content: center;}
+  .loginForm input[type=text]{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-content: center;
+  resize:vertical;
+}
+  .mainheader{
+    background-color:green;
+    color: white;
+    padding:10px 20px;
+    font-family:"Georgia";
+  }
+  .Event{
+margin-left: 20px;
+font-family:"Georgia";
+}
+  .mainheader a{
+     text-align: center;
+    color: white;
+    font-family:"Georgia";
+  }
+.mainheader li{
+  display: inline;
+  float:right;
+  margin-top: 10px;
+  padding-left: 50px;
+  font-family:"Georgia";
+}
+
+.innerNavigation{
+  background-color: green;
+  padding-top: 1px;
+  border-top: 5px solid yellow;
+  border-bottom:5px solid yellow; 
+  color: white;
+  font-family:"Georgia";
+}
+.innerNavigation a{
+  color: white;
+  font-family:"Georgia";
+}
+nav a{
+  color:black;
+  text-decoration: none;
+  font-family:"Georgia";
+}
+.AllEvents{
+  align-content: center;
+  padding-right:10px; 
+  padding-top: 10px;
+  font-family:"Georgia";
+
+}
+.AllEvents li{
+  color:black;
+  font-family:"Georgia";
+}
+.AllEvents a{
+  text-decoration: none;
+  font-family:"Georgia";
+}
+
+.Logo {
+padding: 5px;
+  width: 50px;
+  font-family:"Georgia";
+
+}
+main{
+  width:440px;
+  height: 500px;
+  font-family:"Georgia";
+   padding-left:20px;
+}
+body{
+width:960px;
+margin-left: auto;
+margin-right: auto;
+font-family:"Georgia";
+}
+
+footer{
+    
+    background-color:green;
+    color: white;
+    padding:10px 20px;
+    clear:both;
+    font-family:"Georgia";
+  }
+  footer a{
+    padding-left: 50px;
+    color: white;
+    font-family:"Georgia";
+  }
+.header4{
+	text-align:center;
+}
+.content {
+  padding-top: 100px;
+  padding-left: 200px;
+  width: 600px;
+  position: absolute;
+}
+.contactContainer{
+   padding-left: 55%;
+    align-content: center;
+    width:100%;
+    padding-top: 50px;
+    
+     font-size: 22px;
+}
+.topic{
+  list-style-type:none;
+}

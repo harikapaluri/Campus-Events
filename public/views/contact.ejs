@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="/assets/stylesheets/connections.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Contact</title>
+		
+</head>
+<body>
+<% if(userProfile!=null) { %>
+     <%- include ('partial/LoggedInHeader.ejs') %>
+   <% } %>
+       <% if(userProfile==null) { %>
+      <%- include ('partial/header.ejs') %>
+       <% } %>
+ <!-- <div class="innerNavigation">
+<p><a href="/connections" class="Event">Events</a></p>
+</div> -->
+
+
+	<main>
+	<div class="contactContainer">
+              <h3 id="contactHeader">We are here to help you!! </h3>
+              <p> <b>If you have any queries then get in touch with us at </b><br><br>
+              <p> <b>Email: </b>campusEvents@gmail.com  <br>
+                <b>Phone Number: </b> +1 9803356488 <br>
+                  <b>Address : </b> 9541 University Blvd, Charlotte <br>
+                  <b>Available Timings: </b> Mon-Fri, 08:00 AM- 05:00 PM </p>
+            </div>	
+	
+</main>
+
+<%- include ('partial/footer.ejs') %>
+</body>
+</html>

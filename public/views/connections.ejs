@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="/assets/stylesheets/Connections.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Connections</title>
+		
+</head>
+<body>
+<% if(userProfile!=null) { %>
+     <%- include ('partial/LoggedInHeader.ejs') %>
+   <% } %>
+       <% if(userProfile==null) { %>
+      <%- include ('partial/header.ejs') %>
+       <% } %>
+ <!-- <div class="innerNavigation">
+<p><a href="/connections" class="Event">Events</a></p>
+</div> -->
+
+
+
+
+
+	<main>
+		<% var events=connectionData.events;  var topics=[]; events.forEach(function(item) { topics.push(item.topic) }); %> 
+		<% const t=topics; const dt=[...new Set(t)]; %>
+		<ul class="AllEvents">
+        <%  dt.forEach(function(item){  %>
+           <li class="topic"><h3> <%=item %></h3></li>
+        <%  events.forEach(function(event) { %>
+        <%  if(event.topic===item){ %>
+       <li><a href="/connection/<%- event.connectionId %>"><%= event.name %></a></li>
+      <% } %>
+
+     <% }); %>
+     <% }); %>
+
+			
+			
+	  
+	  
+
+ </ul>
+</main>
+
+<%- include ('partial/footer.ejs') %>
+</body>
+</html>

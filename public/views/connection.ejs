@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="/assets/stylesheets/index.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Connection</title>
+
+	
+</head>
+<body>
+<% if(userProfile!=null) { %>
+     <%- include ('partial/LoggedInHeader.ejs') %>
+   <% } %>
+       <% if(userProfile==null) { %>
+      <%- include ('partial/header.ejs') %>
+       <% } %>
+ <!-- <div class="innerNavigation">
+<p><a href="/connections" class="Event">Events</a></p>
+</div> -->
+	<main>	
+		
+<div class="connectionDescription">
+
+	<p>
+	<% if (data===null){   %>
+    <h3>Sorry No Event Found!</h3>
+<% } %>   
+<% if(data!=null) { %> 
+<h3><%= data.name %> </h3> 
+	<img src = "<%=data.icon %>" alt="norm" class="UserId"/>
+	
+	<p>Hosted by <%= data.host %> <br><%= data.date %> <br> <%= data.time %> <br> <%= data.where %></p>
+	
+	<div class="connDetails">
+	<p><h3>Details</h3>
+	<%= data.details %>
+    </div>
+	
+</div>
+<div class="haside">
+	Are you Attending the event?<%=count %> people are attending.<br>
+		<button class="b1" onclick="window.location.href='/user/rsvp?connectionId=<%=data.connectionId %>&rsvp=Yes'">Yes</button> <button class="b2" onclick="window.location.href='/user/rsvp?connectionId=<%=data.connectionId %>&rsvp=No'">No</button><button class="b3" onclick="window.location.href='/user/rsvp?connectionId=<%=data.connectionId %>&rsvp=Maybe'">Maybe</button>
+</div>
+<% } %>
+
+</main>
+
+<%- include ('partial/footer.ejs') %>
+</body>
+</html>

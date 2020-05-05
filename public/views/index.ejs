@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="/assets/stylesheets/index.css" rel="stylesheet" type="text/css" />
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <title>Campus Events</title>
+   </head>
+   <body>  <% if(userProfile!=null) { %>
+     <%- include ('partial/LoggedInHeader.ejs') %>
+   <% } %>
+       <% if(userProfile==null) { %>
+      <%- include ('partial/header.ejs') %>
+       <% } %>
+       <!-- <div class="innerNavigation">
+         <p><a href="/connections" class="Event">Events</a></p>
+      </div> -->
+      <main>
+         <p class="content">
+         <h4 class="header4"> Welcome to Campus Events!</h4>
+         There are multiple events happening every day in  UNC Charlotte.The variety of events happening in one day is beyond measure. Centre of Graduate Life devises a lecture for improving writing skills whereas on the same day there could be a football match and dance lesson at UREC. It is sometimes impossible to keep track of all the events happening at UNC Charlotte in one day. Sometimes we miss out on things that interest us because we didn’t check a flyer or go through our WhatsApp messages.The aim of this website is to create a common platform for multiple categories. So that the user can use this website to view different events. Be able to view a  list of their friends who are attending as well create alerts to be notified of events of their interests.
+         </main>
+   <%- include ('partial/footer.ejs') %>
+   </body>
+</html>

@@ -1,0 +1,20 @@
+<link href="/assets/stylesheets/index.css" rel="stylesheet" type="text/css" />
+<HEADER>
+         <div class="mainheader">
+         <nav>
+            <ul class="HeaderList">
+               <li><a href="/user/SignOut">&nbsp;Sign Out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+               <li><a href="/savedConnections">&nbsp;Connections &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>|</li>
+               <li><a href="/newConnection">&nbsp;Register for an Event&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+         </ul>
+		 </nav>
+         <a href="/"><img src="/assets/images/events.png" alt="logo" class="Logo"/></a>
+         <h4 class="header4">UNC Charlotte Campus Events</h4>
+		 </div>
+      </HEADER>
+      <div class="innerNavigation">
+<a href="/connections" class="Event">Events</a><h5 class="normName">
+        <% if(userProfile.userName!="null") { %>
+         Welcome <%=userProfile.userName %>!   <% } %></h5>
+
+</div>

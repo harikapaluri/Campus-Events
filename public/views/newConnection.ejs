@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="/assets/stylesheets/newConnection.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <title>Campus Events</title>
+   </head>
+   <body>
+     <% if(userProfile!=null) { %>
+     <%- include ('partial/LoggedInHeader.ejs') %>
+   <% } %>
+       <% if(userProfile==null) { %>
+      <%- include ('partial/header.ejs') %>
+       <% } %>
+       <% if(errors!=null){ %>
+       <p>
+       <% errors.forEach(function(item){ %>
+       <b><%=item.value%></b> <%=item.msg%><br>
+
+      <% });  %>
+       </p>
+
+     <% } %> 
+       <main>
+         <form action="/newConnection" class="eventForm" method="POST">
+            <div class="block">
+  <label for="topic">Category name :</label>
+  <input type="text" id="topic" name="topic"><br>
+  </div>
+  <div class="block">
+  <label for="name">Event name :</label>
+  <input type="text" id="name" name="name"><br>
+</div>
+ <div class="block">
+  <label for="details">Details :</label>
+     <textarea id="details" name="details" placeholder="Describe Event.."></textarea><br>
+   </div>
+    <div class="block">
+   <label for="where">Location :</label>
+  <input type="text" id="where" name="where"><br><br>
+</div>
+ <div class="block">
+  <label for="date">Date :</label>
+   <input type="date" id="date" name="date"><br><br>
+ </div>
+  <div class="block">
+   <label for="stTime">Start Time  hh:mm AM/PM </label>
+  <input type="text" id="stTime" name="stTime"><br>
+</div>
+<div class="block">
+   <label for="endTime">End Time  hh:mm AM/PM </label>
+  <input type="text" id="endTime" name="endTime"><br>
+</div>
+   <div class="create">
+  <input  type="submit" value="Create Connection">
+  </div>
+</form> 
+         </main>
+   <%- include ('partial/footer.ejs') %>
+   </body>
+</html>
