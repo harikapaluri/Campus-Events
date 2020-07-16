@@ -2,9 +2,10 @@ header,footer,main,nav{
   display: block;
 }
 
+
 main{
   
-  font-family:"Georgia";
+  font-family:"Times New Roman";
 }
 .normName{
 
